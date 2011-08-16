@@ -1,0 +1,126 @@
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = http://github.com/sukima/xmledit.git
+[submodule "bundle/mako"]
+	path = bundle/mako
+	url = http://github.com/vim-scripts/mako.vim.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = http://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/pep8"]
+	path = bundle/pep8
+	url = http://github.com/vim-scripts/pep8--Driessen.git
+[submodule "bundle/jpythonfold"]
+	path = bundle/jpythonfold
+	url = http://github.com/vim-scripts/jpythonfold.vim.git
+[submodule "bundle/pydoc"]
+	path = bundle/pydoc
+	url = http://github.com/vim-scripts/pydoc.vim.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = http://github.com/tsaleh/vim-supertab.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = http://github.com/Geekquilibrium/snipmate.vim.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = http://github.com/vim-scripts/surround.vim.git
+[submodule "bundle/gist"]
+	path = bundle/gist
+	url = http://github.com/vim-scripts/Gist.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = http://github.com/scrooloose/nerdtree.git
+[submodule "bundle/nginx"]
+	path = bundle/nginx
+	url = http://github.com/vim-scripts/nginx.vim.git
+[submodule "bundle/pyflakes"]
+	path = bundle/pyflakes
+	url = http://github.com/mitechie/pyflakes-pathogen.git
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = http://github.com/tomtom/tlib_vim.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = http://github.com/tpope/vim-fugitive.git
+[submodule "bundle/makegreen"]
+	path = bundle/makegreen
+	url = http://github.com/reinh/vim-makegreen.git
+[submodule "bundle/nosecompiler"]
+	path = bundle/nosecompiler
+	url = http://github.com/olethanh/Vim-nosecompiler.git
+[submodule "bundle/commandt"]
+	path = bundle/commandt
+	url = http://github.com/wincent/Command-T.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = http://github.com/Raimondi/delimitMate.git
+[submodule "bundle/easymotion"]
+	path = bundle/easymotion
+	url = http://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/endwise"]
+	path = bundle/endwise
+	url = http://github.com/tpope/vim-endwise.git
+[submodule "bundle/vim-enter-indent"]
+	path = bundle/vim-enter-indent
+	url = http://github.com/acustodioo/vim-enter-indent.git
+[submodule "bundle/json"]
+	path = bundle/json
+	url = http://github.com/leshill/vim-json.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/vim-html-enhanced"]
+	path = bundle/vim-html-enhanced
+	url = http://github.com/acustodioo/php.vim-html-enhanced.git
+[submodule "bundle/ruby"]
+	path = bundle/ruby
+	url = http://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = http://github.com/tpope/vim-rails.git
+[submodule "bundle/ragtag"]
+	path = bundle/ragtag
+	url = http://github.com/tpope/vim-ragtag.git
+[submodule "bundle/cucumber"]
+	path = bundle/cucumber
+	url = http://github.com/tpope/vim-cucumber.git
+[submodule "bundle/markdown"]
+	path = bundle/markdown
+	url = http://github.com/tpope/vim-markdown.git
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = http://github.com/mattn/zencoding-vim.git
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = http://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/rope"]
+	path = bundle/rope
+	url = http://github.com/sontek/rope-vim.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = http://github.com/mileszs/ack.vim.git
+[submodule "bundle/coffescript"]
+	path = bundle/coffescript
+	url = http://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/cake"]
+	path = bundle/cake
+	url = http://github.com/vim-scripts/cake.vim.git
+[submodule "bundle/scss"]
+	path = bundle/scss
+	url = http://github.com/cakebaker/scss-syntax.vim.git
+[submodule "bundle/checksyntax"]
+	path = bundle/checksyntax
+	url = http://github.com/tomtom/checksyntax_vim.git
+[submodule "bundle/shell"]
+	path = bundle/shell
+	url = http://github.com/xolox/vim-shell.git
+[submodule "bundle/piv"]
+	path = bundle/piv
+	url = http://github.com/spf13/PIV.git
+[submodule "bundle/pyrepl"]
+	path = bundle/pyrepl
+	url = http://github.com/Bogdanp/pyrepl.vim.git
+[submodule "bundle/rbrepl"]
+	path = bundle/rbrepl
+	url = http://github.com/Bogdanp/rbrepl.vim.git
