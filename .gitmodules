@@ -21,7 +21,7 @@
 	url = http://github.com/tsaleh/vim-supertab.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = http://github.com/Geekquilibrium/snipmate.vim.git
+	url = git://github.com/garbas/vim-snipmate.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/vim-scripts/surround.vim.git
@@ -124,3 +124,9 @@
 [submodule "bundle/rbrepl"]
 	path = bundle/rbrepl
 	url = http://github.com/Bogdanp/rbrepl.vim.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = git://github.com/Geekquilibrium/snipmate-snippets.git
