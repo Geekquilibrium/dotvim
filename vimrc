@@ -101,10 +101,10 @@ if has("gui_running")
     set guifont=Liberation\ Mono\ 8" use this font
     set lines=75          " height = 50 lines
     set columns=180       " width = 100 columns
-    set background=light  " adapt colors for background
+    set background=dark  " adapt colors for background
     set keymodel=
     set mousehide
-    colorscheme tutticolori
+    colorscheme solarized
     "colorscheme void
 
     " To set the toolbars toggle (icons on top of the screen)
@@ -213,7 +213,7 @@ nmap <leader>Y "*yy
 nmap <leader>p "*p
 
 " show the registers from things cut/yanked
-nmap <leader>r :registers<CR>
+nmap \r :registers<CR>
 
 " map the various registers to a leader shortcut for pasting from them
 nmap <leader>0 "0p
@@ -401,6 +401,9 @@ au BufReadPost quickfix map <buffer> <silent> <CR> :.cc <CR> :ccl
 au BufRead *.py compiler nose
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 autocmd Filetype python nmap <F9> :!ctags -R --languages=python <return>
+autocmd FileType python nmap <leader>r :PyREPLToggle<CR>
+autocmd filetype python nmap <silent><C-t> :w<CR>:call <SID>PyRunTests()<CR>
+autocmd filetype python imap <silent><C-t> <ESC>:w<CR>:call <SID>PyRunTests()<CR>
 
 " ==================================================
 " Javascript
@@ -427,6 +430,7 @@ let g:ruby_minlines = 500
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 autocmd Filetype ruby nmap <F9> :!ctags -R --languages=ruby <return>
+autocmd FileType ruby nmap <leader>r :RbREPLToggle<CR>
 
 " ==================================================
 " PHP
@@ -580,7 +584,8 @@ autocmd FileType python map <buffer> <leader>M :call Pep8()<CR>
 " ,, - complete and tab to next section
 " ,n - show list of snippets for this filetype
 
-" bundle/snipmate/after/plugin/snipmate
+"bundle/snipmate/after/plugin/snipmate
+"source ~/vimfiles/bundle/snipmate/after/plugin/snipMate.vim
 ino <silent> <leader>, <c-r>=TriggerSnippet()<cr>
 snor <silent> <leader>, <esc>i<right><c-r>=TriggerSnippet()<cr>
 ino <silent> <leader>\< <c-r>=BackwardsSnippet()<cr>
@@ -720,3 +725,34 @@ function! AskQuit( msg, proposed_action )
         exit
     endif
 endfunction
+
+" " Displays a red or green bar at the bottom of the screen
+" function! Bar(type)
+"     hi GreenBar guifg=white guibg=green ctermfg=white ctermbg=darkgreen
+"     hi RedBar guifg=white guibg=red ctermfg=white ctermbg=darkred
+"     if a:type == "red"
+"         echohl RedBar
+"     else
+"         echohl GreenBar
+"     endif
+"     echon repeat(" ", &columns - 1)
+"     echohl None
+" endfunc
+" 
+" " Runs nose on the current file
+" function! <SID>PyRunTests()
+"     python <<EOF
+" import subprocess
+" import vim
+" 
+" filename = vim.eval("expand('%:p')")
+" result = subprocess.Popen(["nosetests", filename],
+"                           stdout=subprocess.PIPE,
+"                           stderr=subprocess.stdout).communicate()[0]
+" if result.split("\n")[-2] == "OK":
+"     vim.command("execute Bar('green')")
+" else:
+"     vim.command("execute Bar('red')")
+"     print result
+" EOF
+" endfunc
