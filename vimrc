@@ -98,23 +98,23 @@ filetype plugin indent on " enable loading indent file for filetype
 
 " In GVIM
 if has("gui_running")
-    set guifont=Liberation\ Mono\ 8" use this font
-    set lines=75          " height = 50 lines
-    set columns=180       " width = 100 columns
-    set background=dark  " adapt colors for background
-    set keymodel=
-    set mousehide
-    colorscheme solarized
-    "colorscheme void
+set guifont=Liberation\ Mono\ 8" use this font
+set lines=75          " height = 50 lines
+set columns=180       " width = 100 columns
+set background=dark  " adapt colors for background
+set keymodel=
+set mousehide
+colorscheme solarized
+"colorscheme void
 
-    " To set the toolbars toggle (icons on top of the screen)
-    nnoremap <C-F1> :if &go=~#'m'<BAR>set go-=m<BAR>else<BAR>set go+=m<BAR>endif<CR>
-    nnoremap <C-F2> :if &go=~#'T'<BAR>set go-=T<BAR>else<BAR>set go+=T<BAR>endif<CR>
-    nnoremap <C-F3> :if &go=~#'r'<BAR>set go-=r<BAR>else<BAR>set go+=r<BAR>endif<CR>
+" To set the toolbars toggle (icons on top of the screen)
+nnoremap <C-F1> :if &go=~#'m'<BAR>set go-=m<BAR>else<BAR>set go+=m<BAR>endif<CR>
+nnoremap <C-F2> :if &go=~#'T'<BAR>set go-=T<BAR>else<BAR>set go+=T<BAR>endif<CR>
+nnoremap <C-F3> :if &go=~#'r'<BAR>set go-=r<BAR>else<BAR>set go+=r<BAR>endif<CR>
 else
-    set background=dark   " adapt colors for dark background
-    colorscheme lucius
-    set t_Co=256
+set background=dark   " adapt colors for dark background
+colorscheme lucius
+set t_Co=256
 endif
 
 " ==================================================
@@ -176,7 +176,7 @@ set grepprg=ack-grep
 
 " If we're running in vimdiff then tweak out settings a bit
 if &diff
-   set nospell
+set nospell
 endif
 
 " ==================================================
@@ -247,7 +247,7 @@ nmap <leader>lp :lN<CR>
 " for when we forget to use sudo to open/edit a file
 cmap w!! w !sudo tee % >/dev/null
 
-nnoremap <leader>q gqap
+" nnoremap <leader>q gqap
 
 " ==================================================
 " Windows / Splits
@@ -280,11 +280,11 @@ noremap <f2> <Esc>:close<CR><Esc>
 
 " mapping to make movements operate on 1 screen line in wrap mode
 function! ScreenMovement(movement)
-   if &wrap
-      return "g" . a:movement
-   else
-      return a:movement
-   endif
+if &wrap
+  return "g" . a:movement
+else
+  return a:movement
+endif
 endfunction
 onoremap <silent> <expr> j ScreenMovement("j")
 onoremap <silent> <expr> k ScreenMovement("k")
@@ -323,11 +323,11 @@ map <leader>u :match Error /[\x7f-\xff]/<CR>
 " deletes excess space but maintains the list of jumps unchanged
 " for more details see: h keepjumps
 fun! CleanExtraSpaces()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    :%s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
+let save_cursor = getpos(".")
+let old_query = getreg('/')
+:%s/\s\+$//e
+call setpos('.', save_cursor)
+call setreg('/', old_query)
 endfun
 map <silent><leader>S <esc>:keepjumps call CleanExtraSpaces()<cr>
 
@@ -381,8 +381,8 @@ au filetype help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 "If we're editing a mail message in mutt change to 70 wide and wrap
 "without linex numbers
 augroup mail
-    autocmd!
-    autocmd FileType mail set textwidth=70 wrap nonumber nocursorline
+autocmd!
+autocmd FileType mail set textwidth=70 wrap nonumber nocursorline
 augroup END
 
 " If we're editing a .txt file then skip line numbers
@@ -498,10 +498,15 @@ nmap \g :GundoToggle<CR>
 let g:gundo_right = 1
 
 " CommandT
-nmap \t :CommandT<CR>
-nmap \tt :CommandTFlush<CR>
-let g:CommandTMaxHeight = 10
-let g:CommandTMatchWindowAtTop = 1
+"nmap \t :CommandT<CR>
+"nmap \tt :CommandTFlush<CR>
+"let g:CommandTMaxHeight = 10
+"let g:CommandTMatchWindowAtTop = 1
+
+" LycosaExplorer
+" lf :LycosaFilesystemExplorer<CR>
+" lr :LycosaFilesystemExplorerFromHere<CR>
+" lb :LycosaBufferExplorer<CR>
 
 " Ack
 nmap \a :Ack!
@@ -525,10 +530,10 @@ let g:surround_indent = 1
 " CakePHP
 let g:cakephp_auto_set_project = 1
 let g:cakephp_app = "/path/to/cakephp_app/"
-nmap \cc :Ccontroller
-nmap \cm :Cmodel
-nmap \cv :Cview
-nmap \cl :Clog
+nmap \cc :Ccontroller <space>
+nmap \cm :Cmodel <space>
+nmap \cv :Cview <space>
+nmap \cl :Clog <space>
 
 " Ragtag
 let g:ragtag_global_maps = 1
