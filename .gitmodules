@@ -127,6 +127,9 @@
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = git://github.com/Geekquilibrium/snipmate-snippets.git
-[submodule "bundle/LycosaExplorer"]
-	path = bundle/LycosaExplorer
-	url = git://github.com/vim-scripts/LycosaExplorer.git
+[submodule "bundle/FuzzyFinder"]
+	path = bundle/FuzzyFinder
+	url = git://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/l9"]
+	path = bundle/l9
+	url = git://github.com/vim-scripts/L9.git

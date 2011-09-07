@@ -99,6 +99,7 @@ filetype plugin indent on " enable loading indent file for filetype
 " In GVIM
 if has("gui_running")
 set guifont=Liberation\ Mono\ 8" use this font
+"set guifont=Monaco\ Regular\ 9
 set lines=75          " height = 50 lines
 set columns=180       " width = 100 columns
 set background=dark  " adapt colors for background
@@ -507,6 +508,12 @@ let g:gundo_right = 1
 " lf :LycosaFilesystemExplorer<CR>
 " lr :LycosaFilesystemExplorerFromHere<CR>
 " lb :LycosaBufferExplorer<CR>
+
+" FuzzyFinder
+nmap <leader>tf :FufFile<CR>
+nmap <leader>tb :FufBuffer<CR>
+nmap <leader>td :FufDir<CR>
+nmap <leader>tl :FufLine<CR>
 
 " Ack
 nmap \a :Ack!
