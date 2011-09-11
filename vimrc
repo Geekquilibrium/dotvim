@@ -98,11 +98,10 @@ filetype plugin indent on " enable loading indent file for filetype
 
 " In GVIM
 if has("gui_running")
-set guifont=Liberation\ Mono\ 8" use this font
-"set guifont=Monaco\ Regular\ 9
+set guifont=Liberation\ Mono\ 9" use this font
 set lines=75          " height = 50 lines
 set columns=180       " width = 100 columns
-set background=dark  " adapt colors for background
+set background=light  " adapt colors for background
 set keymodel=
 set mousehide
 colorscheme solarized
@@ -113,7 +112,7 @@ nnoremap <C-F1> :if &go=~#'m'<BAR>set go-=m<BAR>else<BAR>set go+=m<BAR>endif<CR>
 nnoremap <C-F2> :if &go=~#'T'<BAR>set go-=T<BAR>else<BAR>set go+=T<BAR>endif<CR>
 nnoremap <C-F3> :if &go=~#'r'<BAR>set go-=r<BAR>else<BAR>set go+=r<BAR>endif<CR>
 else
-set background=dark   " adapt colors for dark background
+set background=light   " adapt colors for dark background
 colorscheme lucius
 set t_Co=256
 endif
@@ -491,12 +490,12 @@ nnoremap <C-F6> :Open<CR>
 " http://www.vim.org/scripts/script.php?script_id=1658
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 map <leader>a :NERDTreeToggle<CR>
-let g:NERDTreeWinPos = 'right'
+" let g:NERDTreeWinPos = 'right'
 
 " Gundo
 " http://www.vim.org/scripts/script.php?script_id=3304
 nmap \g :GundoToggle<CR>
-let g:gundo_right = 1
+" let g:gundo_right = 1
 
 " CommandT
 "nmap \t :CommandT<CR>
@@ -510,10 +509,10 @@ let g:gundo_right = 1
 " lb :LycosaBufferExplorer<CR>
 
 " FuzzyFinder
-nmap <leader>tf :FufFile<CR>
-nmap <leader>tb :FufBuffer<CR>
-nmap <leader>td :FufDir<CR>
-nmap <leader>tl :FufLine<CR>
+nmap <leader>ff :FufFile<CR>
+nmap <leader>fb :FufBuffer<CR>
+nmap <leader>fd :FufDir<CR>
+nmap <leader>fl :FufLine<CR>
 
 " Ack
 nmap \a :Ack!
